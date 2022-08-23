@@ -25,14 +25,13 @@ def ascending_bubble_sort(_matrix: list, col_sum: list):
 
 
 def print_matrix(_matrix: list, col_sum: list, status='Unsorted'):
-    # print unsort matrix
+    # print unsorted matrix
     print(f'\n{status.capitalize()} matrix:')
     for row in range(len(_matrix)):
         for elem in range(len(_matrix[row])):
             print(f"{_matrix[row][elem]:<7}", end=" ")
         print()
     for res in range(len(col_sum)):
-        # print sorted matrix
         print(f'{col_sum[res]:<7}', end=" ")
     print()
 
