@@ -13,7 +13,7 @@ def ascending_bubble_sort(_matrix: list, col_sum: list):
                 temp = col_sum[elem]
                 col_sum[elem] = col_sum[elem + 1]
                 col_sum[elem + 1] = temp
-    else:
+
         # bubble sort for columns with special params
         for i in range(len(_matrix)):
             for j in range(len(_matrix)):
