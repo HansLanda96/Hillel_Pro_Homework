@@ -2,7 +2,14 @@ from random import randrange
 
 
 def ascending_bubble_sort(_matrix: list, col_sum: list):
-    # sort for ascending
+    """
+    First loop for ascending sort.
+
+    Second loop for bubble sort.
+
+    :param _matrix: list of matrix
+    :param col_sum: list with sum of columns of matrix
+    """
     for row in range(len(col_sum)):
         for elem in range(0, len(col_sum) - row - 1):
             if col_sum[elem] > col_sum[elem + 1]:
@@ -14,7 +21,6 @@ def ascending_bubble_sort(_matrix: list, col_sum: list):
                 col_sum[elem] = col_sum[elem + 1]
                 col_sum[elem + 1] = temp
 
-        # bubble sort for columns with special params
         for i in range(len(_matrix)):
             for j in range(len(_matrix)):
                 for k in range(0, len(_matrix) - j - 1):
@@ -25,7 +31,6 @@ def ascending_bubble_sort(_matrix: list, col_sum: list):
 
 
 def print_matrix(_matrix: list, col_sum: list, status='Unsorted'):
-    # print unsorted matrix
     print(f'\n{status.capitalize()} matrix:')
     for row in range(len(_matrix)):
         for elem in range(len(_matrix[row])):
