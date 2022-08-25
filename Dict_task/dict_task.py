@@ -5,10 +5,10 @@ def list_file(file_name: str) -> list:
     """
     :param file_name: file that u want to read and convert to list
 
-    :return: list of words from text file without any punctuation marks
+    :return: list of words from text file without any punctuation marks and title() function
     """
     with open(file_name, 'r') as file:
-        text = file.read().translate(str.maketrans('', '', punctuation)).split()
+        text = file.read().translate(str.maketrans('', '', punctuation)).title().split()
     return text
 
 
