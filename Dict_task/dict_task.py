@@ -1,4 +1,5 @@
 from string import punctuation
+import json
 
 
 def list_file(file_name: str) -> list:
@@ -50,7 +51,8 @@ def max_value(dictionary: dict) -> str:
 
 def main():
     print(f'\nText from file is: \n\n{text_file("long_text.txt")}'
-          f'\n\nDictionary from text is: \n{dict_from_list(list_file("long_text.txt"))}'
+          f'\n\nDictionary from text is: \n'
+          f'{json.dumps(dict_from_list(list_file("long_text.txt")), indent=1, sort_keys=True)}'
           f'\n\n{max_value(dict_from_list(list_file("long_text.txt")))}')
 
 
