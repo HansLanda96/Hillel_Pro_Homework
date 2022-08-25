@@ -46,7 +46,7 @@ def max_value(dictionary: dict) -> str:
     values = list(dictionary.values())
     max_value_dict = max(values)
     max_key_dict = keys[values.index(max_value_dict)]
-    return f'The most frequent word is {max_key_dict.capitalize()} and it appears {max_value_dict} times in text'
+    return f'The most frequent word is {max_key_dict} and it appears {max_value_dict} times in text'
 
 
 def main():
