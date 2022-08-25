@@ -16,7 +16,7 @@ def text_file(file_name: str) -> str:
     """
     :param file_name: file that u want to read
 
-    :return: initial text
+    :return: return string from file
     """
     with open(file_name, 'r') as file:
         file = file.read()
